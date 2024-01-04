@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS BestTeam (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    cost INTEGER NOT NULL,
+    score REAL
+);
+
+getWholeTeam:
+SELECT *
+FROM BestTeam;
+
+insertPlayer:
+INSERT OR ABORT INTO BestTeam(
+    name, cost, score
+)VALUES ?;
+
+deleteTable:
+DELETE FROM BestTeam;
+
+vacuum:
+VACUUM ;

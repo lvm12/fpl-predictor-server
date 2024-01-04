@@ -1,0 +1,26 @@
+CREATE TABLE IF NOT EXISTS Players(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    cost INTEGER NOT NULL,
+    score REAL
+);
+
+getAllPlayers:
+SELECT *
+FROM Players;
+
+getPlayerById:
+SELECT *
+FROM Players
+WHERE id=:id;
+
+insertPlayer:
+INSERT INTO Players(
+    name,cost,score
+)VALUES ?;
+
+deleteTable:
+DELETE FROM Players;
+
+vaccum:
+VACUUM ;
